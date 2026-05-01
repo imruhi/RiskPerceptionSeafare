@@ -13,7 +13,8 @@ with open("params.json", 'r') as f:
 
 def evaluate_model(label2id, id2label, val_data):
     model_id = PARAMS["classi_finetune_model"]
-    model_id_finetuned = f'{PARAMS["save_model"]}{model_id.split("/")[-1]}_finetuned'
+    model_id_finetuned = f'{PARAMS["save_model"]}{model_id.split("/")[-1]}_finetuned_{PARAMS["batch_size"]}_{PARAMS["train_epochs"]}'
+
     tokenizer = AutoTokenizer.from_pretrained(model_id, max_length = 512, padding=True, Truncation=True)
     config = AutoConfig.from_pretrained(model_id, num_labels=len(label2id))
     config.label2id = label2id

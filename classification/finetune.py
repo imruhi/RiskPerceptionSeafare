@@ -52,8 +52,9 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 def train():
     model_id = PARAMS["classi_finetune_model"]
     dataset = load_dataset()
+    print(f"Size of dataset: {len(dataset)}")
     labels = list(dataset["label"].unique())
-    save_path = f'{PARAMS["save_model"]}{model_id.split("/")[-1]}_finetuned'
+    save_path = f'{PARAMS["save_model"]}{model_id.split("/")[-1]}_finetuned_{PARAMS["batch_size"]}_{PARAMS["train_epochs"]}'
 
     tokenizer_len = AutoTokenizer.from_pretrained(model_id, max_length = 512)
     tokenizer = AutoTokenizer.from_pretrained(model_id, max_length = 512, padding=True, Truncation=True)

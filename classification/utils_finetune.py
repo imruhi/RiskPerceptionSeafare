@@ -19,9 +19,6 @@ with open("params.json", 'r') as f:
 def load_dataset():
     dataset_path = f'{PARAMS["roberta_data_path"]}_{PARAMS["word_window"]}_filtered'
     all_excerpts = Dataset.load_from_disk(dataset_path).to_pandas()
-    # after topic_modeling choose the topics wanted 
-    topics = PARAMS["interested_topics"]
-    all_excerpts = all_excerpts.query("topic in @topics")
     dataset = pd.DataFrame({"text":all_excerpts["text"], "label":all_excerpts["label"]}).dropna().drop_duplicates()
     print("Cleaning text")
     dataset["text"] = [clean_text(x) for x in tqdm(dataset["text"])]
