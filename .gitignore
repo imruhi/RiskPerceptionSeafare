@@ -1,0 +1,8 @@
+*.xlsx
+*.csv
+*/.ipynb_checkpoints/*
+.ipynb_checkpoints/*
+data_gathering/data/*
+old_files/*
+classification/mmBERT-base_finetuned_old/checkpoints/
+classification/mmBERT-base_finetuned/checkpoints/

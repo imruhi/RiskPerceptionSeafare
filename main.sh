@@ -8,7 +8,7 @@
 # echo "########## Linking to shipwrecks ##########"
 # python data_gathering/utils/shipwreck_linking.py
 
-# # step three get concordances
+# step three get concordances
 # echo "########## Getting concordances of texts ##########"
 # python data_gathering/utils/concordance.py
 
@@ -16,8 +16,7 @@
 # echo "########## Filtering using topic modeling ##########"
 # python data_gathering/utils/topic_model_filtering.py
 
-
 # step five train+eval model
 echo "########## Finetuning/Evaluating ##########"
-# tensorboard --logdir /home/imruhi/Documents/RiskPerceptionSeafare/classification/mmBERT-base_finetuned/checkpoints/runs
+# tensorboard --logdir /home/imruhi/Documents/RiskPerceptionSeafare/classification/mmBERT-base_finetuned_16_12/checkpoints/runs
 python -m classification.finetune
