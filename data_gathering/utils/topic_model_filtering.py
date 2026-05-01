@@ -18,6 +18,13 @@ import json
 import torch
 from sentence_transformers import SentenceTransformer
 from clean_text import clean_text
+from wordcloud import WordCloud
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.corpus import stopwords
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+from sklearn.decomposition import PCA
+
 
 print(f"torch.cuda.is_available(): {torch.cuda.is_available()}")
 
@@ -30,7 +37,7 @@ def get_params():
                 # TFIDF
                 "reduce_frequent_words": True, "bm25_weighting": True,   
                 "seed_words": PARAMS["seed_words"],
-                "seed_multiplier": 6,
+                "seed_multiplier": 10,
                 # UMAP
                 "n_neighbors": 10, "n_components": 5, "min_dist": 0.0, "metric_umap": "cosine", "random_state": 42,
                 # HDBSCAN (change min_cluster_size for more/less topics?, default is 10, recommended to only increase above 10)
@@ -41,6 +48,7 @@ def get_params():
                 "diversity": 0.7
             }
     return params
+
 
 def train_model():
     save_path =  PARAMS["topic_model_save"]
@@ -99,15 +107,88 @@ def train_model():
     topic_model.save(save_path, serialization="safetensors", save_ctfidf=True, save_embedding_model=embedding_model)
 
     dataset["topic"] = topics
-    topic_interested = []
-    for idx, row in topic_model.get_topic_info().iterrows():
-        if any(i in row["Name"] for i in params['seed_words']):
-            topic_interested.append(int(row["Topic"]))
-    dataset_roberta = dataset[dataset["topic"].isin(topic_interested)]
-    print(f"Filtered size: {len(dataset_roberta)}")
 
-    Dataset.from_pandas(dataset_roberta.drop(columns="text_cleaned")).save_to_disk(data_path+"_filtered")
+    Dataset.from_pandas(dataset.drop(columns="text_cleaned")).save_to_disk(data_path+"_filtered")
+
+def knn_clustering(dataset):
+    data_path = f'{PARAMS["roberta_data_path"]}_{PARAMS["word_window"]}_filtered'
+
+    stemmer = PorterStemmer()
+    lemmatizer = WordNetLemmatizer()
+    stop_words = set(stopwords.words('english'))
+
+    def clean_text_(text):
+        text = clean_text(text)
+        text = re.sub(r'[^a-zA-Z\s]', '', text)  # Remove punctuation and numbers
+        text = text.lower()  # Convert to lowercase
+        words = text.split()  # Split into words
+        words = [word for word in words if word not in stop_words]  # Remove stop words
+        return ' '.join(words)
+
+    def normalize_text(text, method='lemmatization'):
+        words = text.split()
+        if method == 'stemming':
+            words = [stemmer.stem(word) for word in words]
+        elif method == 'lemmatization':
+            words = [lemmatizer.lemmatize(word) for word in words]
+        return ' '.join(words)
+
+    def preprocess_text(text, method='lemmatization'):
+        text = clean_text_(text)
+        text = normalize_text(text, method)
+        return text
+    
+    embedding_model = SentenceTransformer(PARAMS["sentence_model"], model_kwargs={"torch_dtype": "float16"}, device="cuda")
+    dataset["text_cleaned"] = [preprocess_text(x) for x in dataset["text"]]
+    embeddings = embedding_model.encode(list(dataset["text_cleaned"]) , show_progress_bar=True)
+
+    def perform_kmeans_clustering(embeddings, n_clusters=5):
+        kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+        cluster_labels = kmeans.fit_predict(embeddings)
+
+        silhouette_avg = silhouette_score(embeddings, cluster_labels)
+        print(f"K-Means clustering with {n_clusters} clusters: Silhouette Score = {silhouette_avg}")
+
+        return cluster_labels, silhouette_avg, kmeans
+    kmeans_labels, kmeans_silhouette, kmeans_model = perform_kmeans_clustering(embeddings, n_clusters=4)
+
+    dataset["label_knn"] = kmeans_labels
+    label_to_keep = []
+
+    for x in dataset["label_knn"].unique():
+        df = dataset[dataset["label_knn"]==x]
+        print(f"CLuster size: ", len(df))
+        t = list(df.head()["text"])
+        all_texts = " ".join(list(df["text_cleaned"]))
+        text = ' '.join(word for word in all_texts.split() if word not in stop_words)
+        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+        top_10 = [v for v in wordcloud.words_.keys()][:10]
+        print(", ".join(top_10))
+        if "sea" in top_10:
+            label_to_keep.append(x)
+
+    return dataset, label_to_keep
+    
+def filter():
+    save_path =  PARAMS["topic_model_save"]
+    data_path = f'{PARAMS["roberta_data_path"]}_{PARAMS["word_window"]}_filtered'
+    embedding_model = SentenceTransformer(PARAMS["sentence_model"], model_kwargs={"torch_dtype": "float16"}, device="cuda")
+    
+    dataset = Dataset.load_from_disk(data_path).to_pandas().reset_index(drop=True)
+
+    # most common topic from bertopic should be relating to sea
+    dataset = dataset[dataset["topic"].isin([0])]
+
+    # knn filtering
+    if PARAMS["bKnn"].lower() == "true":
+        dataset, label_to_keep = knn_clustering(dataset=dataset)
+        dataset = dataset[dataset["label_knn"].isin(label_to_keep)].drop(columns=["label_knn", "text_cleaned"])
+        
+    print(f"Filtered size: {len(dataset)}")
+    Dataset.from_pandas(dataset).save_to_disk(data_path)
+    print(f"saved at {data_path}")
 
 if __name__ == '__main__':
 
     train_model()
+    filter()
