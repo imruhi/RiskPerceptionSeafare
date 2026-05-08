@@ -1,104 +1,31 @@
-Explaination: The words are the top words which contribute to negatively to each class. I have also put some of them in context to see if they make sense.  
-
 
 Top words for class HIGH:
 
-Ionia: -0.0582
-    of the Massiliots and is larger than the one inside the temple The Massiliots are a colony of Phocaea in [[Ionia]] and their city was founded by some of those who ran away
+From this city there is an: -0.1069
+     there is a lookout for thunnies lookout for thunnies From this city [[From this city there is an]] there is an indistinct and distant indistinct and distant view of Sardinia view of Sardinia Cyrnus however is
 
-Minor: -0.0544
-    From Makaraia to Sabratha 400 stades it is a city without a harbor It has an open roadstead Syrtis [[Minor]] follows
+there is an indistinct and distant: -0.0777
+    there is a lookout for thunnies lookout for thunnies From this city From this city there is an [[there is an indistinct and distant]] indistinct and distant view of Sardinia view of Sardinia Cyrnus however is Cyrnus however is nearer being distant
 
-consul.,: -0.0456
-    While these events were occurring in Italy the [[consul.,]] Cn Servilius Geminus with a fleet of 120 vessels visited Sardinia and Corsica and received hostages from both islands from
+Claudius was emperor of Rome Peter: -0.0769
+    to him the monk One must monk One must note that when note that when Claudius was emperor [[Claudius was emperor of Rome Peter]] of Rome Peter the Apostle ordained the Apostle ordained Evodius in Antioch Evodius in Antioch and the formerlyknown
 
-Cherronesos: -0.0432
-    — for it is drinkable — it is a brief sail upstream to the lake from Pharos There is also [[Cherronesos]] with a harbor the coastal voyage is 200
+Near Rome the waters of Albula: -0.0755
+     [[Near Rome the waters of Albula]] waters of Albula heal wounds These heal wounds These are lukewarm but are lukewarm but those of Cutilia
 
-Peter: -0.0390
-    Tyrannus is appointed as the 19th bishop of Antioch After Theonus [[Peter]] is ordained the 21st bishop of the Church of Alexandria who later in the ninth year of
-    to God and has been dedicated to him the monk One must note that when Claudius was emperor of Rome [[Peter]] the Apostle ordained Evodius in Antioch and the formerlyknown Nazarites and Galileans came to be called Christians (Tr ALEX GOTTESMAN
+Pharos There is also Cherronesos with: -0.0727
+    is a brief sail upstream to sail upstream to the lake from the lake from Pharos There is [[Pharos There is also Cherronesos with]] also Cherronesos with a harbor the a harbor the coastal voyage is coastal voyage is 200
 
-XIX: -0.0370
-    Book [[XIX]] CONTAINING THE INTERVAL OF THREE YEARS AND A HALF FROM THE DEPARTURE OUT OF BABYLON TO FADUS THE ROMAN PROCURATOR
+few Roman emperors the fourth is: -0.0705
+     statues of a few Roman emperors [[few Roman emperors the fourth is]] the fourth is called the temple called the temple of Athena Forethought of Athena Forethought Of its two
 
-Stratos: -0.0317
-    king Herodes changed the name of [[Stratos]] Tower to Caesareia of Palestine and king Archelaus changed the name of Mazaca to Caesareia of Cappadocia This Caesar was
+Rhine a third towards the ocean: -0.0704
+     Santones and Aquitaine another towards the another towards the Rhine a third [[Rhine a third towards the ocean]] towards the ocean by the country by the country of the Bellovaci of the Bellovaci and Ambiani and
 
-43°15: -0.0309
-    Kinyphos river mouth . 42°15 . 31°30 Kisternai . 42°50 . 31°20 Barathia . 42°20 . 31°30 Trieron promontory . [[43°15]] . 31°20 Kephalai promontory . 44°20 . 31°20
+those who ran away: -0.0685
+...
+     This as follows Cambyses took the [[Cambyses took the crown following Cyrus]] crown following Cyrus who was the who was the first Persian king first Persian king Then
 
-Tauroeis: -0.0280
-    they say one hundred and twenty years before the battle of Salamis Timaios recounts the founding Next after this is [[Tauroeis]] and near it the city Olbia and Antipolis the last of these After Liguria are Pelasgians who settled here coming
-
-Climachias: -0.0241
-    a regular month in which the pontifex is bound to be appointed A man of the name of Artemo surnamed [[Climachias]] was desirous of that
-
-Top words for class MEDIUM:
-
-boys: -0.6295
-    deserves our fostering care it is the sacred art of music Do you therefore select from the citizens of Alexandria [[boys]] of good birth and give orders that two artabae of corn are to be furnished every month to each of
-
-attempted: -0.6027
-    Meanwhile Torquatus and the other legates on arriving at Alexandria [[attempted]] to induce the elder Ptolemy to be reconciled to his brother and cede Cyprus to him 2 When
-
-Deuso: -0.3284
-    The Saxons slaughtered at [[Deuso]] in the land of the Franks Almost eighty thousand Burgundians marched down to the Rhine which had never occurred before
-
-Pompei: -0.3258
-    child was killed she herself survived without being otherwise injured Among the portents in connexion with Catiline a towncouncillor of [[Pompei]]
-
-Phocaea: -0.3195
-    are to be seen many of the ancient wooden images of Athena in a sitting posture as for example in [[Phocaea]] Massalia Rome Chios and several other places Also the more recent writers agree that the city was wiped out among
-    But in fact a people of Asia from [[Phocaea]] to avoid the severity of Harpalus prefect of king Cyrus set sail for Italy A part of them founded Velia
-    votive offering of the Massiliots and is larger than the one inside the temple The Massiliots are a colony of [[Phocaea]] in Ionia and their city was founded by some of those who ran away
-
-Gennesareth: -0.3166
-    The country also that lies over against this lake hath the same name of [[Gennesareth]] its nature is wonderful as well as its beauty its soil is so fruitful
-
-Alexandria),: -0.3080
-    Other great ships driven by the mad blasts landed on the tops of buildings (as happened at [[Alexandria),]] and some were driven almost two miles inland like a Laconian ship which I myself in passing that way saw
-
-BABYLON: -0.2848
-    Book XIX CONTAINING THE INTERVAL OF THREE YEARS AND A HALF FROM THE DEPARTURE OUT OF [[BABYLON]] TO FADUS THE ROMAN PROCURATOR NOW this Caius did not demonstrate his
-
-Phocaeans: -0.2716
-    After Thurii comes Lagaria a stronghold founded by Epeius and the [[Phocaeans]] thence comes the Lagaritan wine which is sweet mild and extremely well thought of among physicians That
-
-Phocaean: -0.2678
-    a gallant man and in particular he despised the great no less than Heraclitus For example his native place the [[Phocaean]] colony once known as Hyele and afterwards as Elea a city of moderate size skilled in nothing but to rear
-
-Top words for class LOW:
-
-hermaphrodites: -0.4384
-    be a time”; I have often told the story of Diomedes of Daunos and the Aetolians and about the two [[hermaphrodites]] who were buried alive in the
-
-Carnutes: -0.3620
-    Loire Nemossus their metropolis is built on the same river This river having flowed past Cenabum an emporium of the [[Carnutes]] situated about
-
-Phrygia: -0.2793
-    brought from Seleucia is made of cedarwood There is a tree resembling the cedar in Arcadia and a shrub in [[Phrygia]] is called the cedrys
-    The followers of Montanus Alcibiades and Theodotus in [[Phrygia]] were now first giving wide circulation to their assumption in regard to prophecy — for the many other miracles that
-    Now [[Phrygia]] Paroreia has a kind of mountainous ridge extending from the east towards the west and below it on either side
-
-sedition: -0.2634
-    Josephus also makes mention of these things in the eighteenth book of his Antiquities in the following words A [[sedition]] having arisen in Alexandria between the Jews that dwell
-    Josephus also makes mention of these things in the eighteenth book of his Antiquities in the following words A [[sedition]] having arisen in Alexandria between the Jews that dwell
-
-consul.,: -0.2621
-    While these events were occurring in Italy the [[consul.,]] Cn Servilius Geminus with a fleet of 120 vessels visited Sardinia and Corsica and received hostages from both islands from
-
-Agrippinus: -0.2444
-    Lucius Caesar celebrated a triumph with his brother over the Parthians [[Agrippinus]] presided as the 9th bishop of Alexandria for 12 years
-
-roadstead: -0.2108
-    From Makaraia to Sabratha 400 stades it is a city without a harbor It has an open [[roadstead]] Syrtis Minor follows
-
-pontifex: -0.2074
-    At Cephaloedium there is a regular month in which the [[pontifex]] is bound to be appointed A man of the name of Artemo surnamed Climachias was desirous of that
-
-Isocrates: -0.2045
-    Μασσαλία Massalia Marseille [[Isocrates]] says in Archidamos that Phokaians having fled the despotic rule of the Great King
-
-Parthians: -0.2013
-    Lucius Caesar celebrated a triumph with his brother over the [[Parthians]] Agrippinus presided as the 9th bishop of Alexandria for 12 years
+parts of the City also the: -0.5091
+    carried from Spes Vetus to the Vetus to the Aventine In all Aventine In all parts of the [[parts of the City also the]] City also the basins new and basins new and old alike have old alike have for the most
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...

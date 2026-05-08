@@ -1,105 +1,96 @@
-Explaination: The words are the top words which contribute to positively to each class. I have also put some of them in context to see if they make sense.  
-
 
 Top words for class HIGH:
 
-Μασσαλία: 0.2282
-    [[Μασσαλία]] Massalia Marseille Isocrates says in Archidamos that Phokaians having fled the despotic rule of the Great King
+island of Kyrnos (Corsica). From Tyrrhenia: 0.4208
+     Off the Tyrrhenian coast is the coast is the island of Kyrnos [[island of Kyrnos (Corsica). From Tyrrhenia]] (Corsica). From Tyrrhenia the voyage to the voyage to Kyrnos is a Kyrnos is a day and a
 
-(Corsica).: 0.2281
-    Off the Tyrrhenian coast is the island of Kyrnos [[(Corsica).]] From Tyrrhenia the voyage to Kyrnos is a day and a half There is an inhabited island in the
+Μασσαλία Massalia Marseille Isocrates says in: 0.4133
+     [[Μασσαλία Massalia Marseille Isocrates says in]] Isocrates says in Archidamos that Phokaians Archidamos that Phokaians having fled the having fled the despotic rule of
 
-Agrippinus: 0.2048
-    Lucius Caesar celebrated a triumph with his brother over the Parthians [[Agrippinus]] presided as the 9th bishop of Alexandria for 12 years
+(Corsica). From Tyrrhenia the voyage to: 0.4119
+    Off the Tyrrhenian coast is the coast is the island of Kyrnos island of Kyrnos (Corsica). From Tyrrhenia [[(Corsica). From Tyrrhenia the voyage to]] the voyage to Kyrnos is a Kyrnos is a day and a day and a half There is
 
-Isocrates: 0.1847
-    Μασσαλία Massalia Marseille [[Isocrates]] says in Archidamos that Phokaians having fled the despotic rule of the Great King
+from Marseilles about 600 stadia The: 0.3836
+    which is situated between Olbia and between Olbia and Antipolis and distant Antipolis and distant from Marseilles about [[from Marseilles about 600 stadia The]] 600 stadia The Var is between
 
-Charibael: 0.1819
-    as Alexandria now receives the things brought both from abroad and from Egypt But not long before our own time [[Charibael]] destroyed the place
+Tyrannus is appointed as the 19th: 0.3555
+     [[Tyrannus is appointed as the 19th]] as the 19th bishop of Antioch bishop of Antioch After Theonus Peter After Theonus Peter is ordained the
 
-boys: 0.1711
-    deserves our fostering care it is the sacred art of music Do you therefore select from the citizens of Alexandria [[boys]] of good birth and give orders that two artabae of corn are to be furnished every month to each of
+was defeated at Marseilles and was: 0.3489
+    Lucius Domitius a man of very man of very distinguished family who distinguished family who was defeated at [[was defeated at Marseilles and was]] Marseilles and was taken prisoner also taken prisoner also by Caesar at by Caesar at Corfinium grew tired
 
-hermaphrodites: 0.1379
-    be a time”; I have often told the story of Diomedes of Daunos and the Aetolians and about the two [[hermaphrodites]] who were buried alive in the
+and about the two hermaphrodites who: 0.3470
+    the story of Diomedes of Daunos Diomedes of Daunos and the Aetolians and the Aetolians and about the [[and about the two hermaphrodites who]] two hermaphrodites who were buried alive were buried alive in the
 
-Deuso: 0.1235
-    The Saxons slaughtered at [[Deuso]] in the land of the Franks Almost eighty thousand Burgundians marched down to the Rhine which had never occurred before
+into the sea The Atax (Aude),: 0.3377
+     [[into the sea The Atax (Aude),]] The Atax (Aude), the Orbis and the Orbis and the Arauris On the Arauris On the first of
 
-Gennesareth: 0.1231
-    The country also that lies over against this lake hath the same name of [[Gennesareth]] its nature is wonderful as well as its beauty its soil is so fruitful
+Marseilles and was taken prisoner also: 0.3364
+    man of very distinguished family who distinguished family who was defeated at was defeated at Marseilles and was [[Marseilles and was taken prisoner also]] taken prisoner also by Caesar at by Caesar at Corfinium grew tired Corfinium grew tired of life and
 
-Delphians: 0.1216
-    Massiliots is of bronze The gold shield given to Athena Pronoia (Forethought by Croesus the Lydian was said by the [[Delphians]] to have been
+the Cyreneans encamped eight thousand strong: 0.3357
+     until they found the Cyreneans encamped [[the Cyreneans encamped eight thousand strong]] eight thousand strong in foot and in foot and five hundred in five hundred in cavalry 14 For
 
 Top words for class MEDIUM:
 
-consul.,: 0.4438
-    While these events were occurring in Italy the [[consul.,]] Cn Servilius Geminus with a fleet of 120 vessels visited Sardinia and Corsica and received hostages from both islands from
+Rome is rising and beside the: 0.7740
+     'Reports come to me that Dardanian me that Dardanian Rome is rising [[Rome is rising and beside the]] and beside the Tibers waves whose Tibers waves whose springs are high springs are high in the Apennines
 
-Carnutes: 0.3381
-    Loire Nemossus their metropolis is built on the same river This river having flowed past Cenabum an emporium of the [[Carnutes]] situated about
+city of Rome to Mediolanum thus: 0.7426
+    to Jerusalem and from Heraclea through from Heraclea through Avlona and the Avlona and the city of Rome [[city of Rome to Mediolanum thus]] to Mediolanum thus City Burdigala on City Burdigala on the Garonna River the Garonna River on which to
 
-hermaphrodites: 0.2857
-    be a time”; I have often told the story of Diomedes of Daunos and the Aetolians and about the two [[hermaphrodites]] who were buried alive in the
+Italy the consul., Cn Servilius Geminus: 0.7194
+     While these events were occurring in were occurring in Italy the consul., [[Italy the consul., Cn Servilius Geminus]] Cn Servilius Geminus with a fleet with a fleet of 120 vessels of 120 vessels visited Sardinia and
 
-Phrygia: 0.2831
-    brought from Seleucia is made of cedarwood There is a tree resembling the cedar in Arcadia and a shrub in [[Phrygia]] is called the cedrys
-    The followers of Montanus Alcibiades and Theodotus in [[Phrygia]] were now first giving wide circulation to their assumption in regard to prophecy — for the many other miracles that
-    Now [[Phrygia]] Paroreia has a kind of mountainous ridge extending from the east towards the west and below it on either side
+way hence to Rome they again: 0.6733
+    they were rashly crossing the open crossing the open sea on the sea on the way hence to [[way hence to Rome they again]] Rome they again encountered such a encountered such a terrific storm
 
-Hyrcanus: 0.2552
-    years and was become the father of seven sons by one wife he had also another son whose name was [[Hyrcanus]]
-    years and was become the father of seven sons by one wife he had also another son whose name was [[Hyrcanus]]
+crown following Cyrus who was the: 0.6691
+     This as follows Cambyses took the Cambyses took the crown following Cyrus [[crown following Cyrus who was the]] who was the first Persian king first Persian king Then
 
-Etrusci: 0.2408
-    The Tyrrheni have now received from the Romans the surname of [[Etrusci]] and Tusci The Greeks thus named them from Tyrrhenus the son of Atys as they say who
+Rome herself once plundering put away: 0.6402
+    into Asia there shall come great shall come great wealth 190 Which wealth 190 Which Rome herself once [[Rome herself once plundering put away]] plundering put away In her luxurious In her luxurious homes and twice homes and twice as much And
 
-Anacreon: 0.2401
-    and the Teian Muse of old drunken [[Anacreon]] And let Sappho be yours (well what’s more wanton?), Menander , whose master’s gulled by his Thracian slaves’ cunning and
+Rome they again encountered such a: 0.6395
+    crossing the open sea on the sea on the way hence to way hence to Rome they again [[Rome they again encountered such a]] encountered such a terrific storm
 
-Caracalla: 0.2269
-    After these Marcus Aurelius Antoninus was made emperor who was thought to be the son of Antoninus [[Caracalla]] He was however priest of the temple of Heliogabalus Having come
+to Mediolanum thus City Burdigala on: 0.6325
+    from Heraclea through Avlona and the Avlona and the city of Rome city of Rome to Mediolanum thus [[to Mediolanum thus City Burdigala on]] City Burdigala on the Garonna River the Garonna River on which to on which to the ocean
 
-(Milion: 0.2258
-    Βασιλική basilica In the basilica behind the Milestone [[(Milion]] — where also the exammon was up until the time of the emperor Heraclius — stood a gilt statue of
+at Rome were Spurius Postumius and: 0.6320
+    In the archonship of Aristophanes at of Aristophanes at Athens the consuls Athens the consuls at Rome were [[at Rome were Spurius Postumius and]] Spurius Postumius and Titus Veturius In Titus Veturius In this year King this year King Alexander set in
 
-Livia: 0.2182
-    father of Claudius Caesar Drusus who at first had the forename Decimus and later that of Nero was born of [[Livia]] within three months after her marriage to
+me that Dardanian Rome is rising: 0.6319
+     'Reports come to me that Dardanian [[me that Dardanian Rome is rising]] Rome is rising and beside the and beside the Tibers waves whose Tibers waves whose springs are high
 
 Top words for class LOW:
 
-attempted: 0.5136
-    Meanwhile Torquatus and the other legates on arriving at Alexandria [[attempted]] to induce the elder Ptolemy to be reconciled to his brother and cede Cyprus to him 2 When
+Ostia and to La Iticcia There: 0.9001
+    esteemed kind belongs to Egypt and to Egypt and the next to the next to Ostia and to [[Ostia and to La Iticcia There]] La Iticcia There are two kinds are two kinds of chive one of chive one with grassgreen leaves
 
-boys: 0.4955
-    deserves our fostering care it is the sacred art of music Do you therefore select from the citizens of Alexandria [[boys]] of good birth and give orders that two artabae of corn are to be furnished every month to each of
+the next to Ostia and to: 0.7974
+    the most highly esteemed kind belongs esteemed kind belongs to Egypt and to Egypt and the next to [[the next to Ostia and to]] Ostia and to La Iticcia There La Iticcia There are two kinds are two kinds of chive one
 
-Alexandria),: 0.3672
-    Other great ships driven by the mad blasts landed on the tops of buildings (as happened at [[Alexandria),]] and some were driven almost two miles inland like a Laconian ship which I myself in passing that way saw
+At 290 stadia from Antium is: 0.7461
+     [[At 290 stadia from Antium is]] from Antium is Mount Circaion insulated Mount Circaion insulated by the sea by the sea and marshes They
 
-Phocaea: 0.3046
-    are to be seen many of the ancient wooden images of Athena in a sitting posture as for example in [[Phocaea]] Massalia Rome Chios and several other places Also the more recent writers agree that the city was wiped out among
-    But in fact a people of Asia from [[Phocaea]] to avoid the severity of Harpalus prefect of king Cyrus set sail for Italy A part of them founded Velia
-    votive offering of the Massiliots and is larger than the one inside the temple The Massiliots are a colony of [[Phocaea]] in Ionia and their city was founded by some of those who ran away
+Tiberius was at Antium holding a: 0.7309
+    After this Gaius Gallus and Marcus Gallus and Marcus Servilius became consuls Servilius became consuls Tiberius was at [[Tiberius was at Antium holding a]] Antium holding a festival in honour festival in honour of Gaius marriage of Gaius marriage for not even
 
-Alphins: 0.2983
-    The water of Lake [[Alphins]] removes psoriasis Varro tells us adding that Titius an expraetor as a result of this complaint had a face like
+from a man of Poseidonia that: 0.7238
+    now is called Hyele This they Hyele This they founded having learnt founded having learnt from a man [[from a man of Poseidonia that]] of Poseidonia that the Pythian prophetess the Pythian prophetess by her answer by her answer meant them to
 
-Thucydides: 0.2943
-    Ἥρων Heron Athens then an exegesis of Dinarchus commentaries on Herodotus Xenophon [[Thucydides]] Approved Words
+from Sinuessa to Puteoli was paved: 0.7217
+     At this time the road leading the road leading from Sinuessa to [[from Sinuessa to Puteoli was paved]] Puteoli was paved with stone And with stone And the same year the same year Domitian slew along
 
-Heraclas: 0.2777
-    About that time Zebinus bishop of Antioch died and Babylas succeeded him And in Alexandria [[Heraclas]] having received the episcopal office after Demetrius was succeeded in the charge of the catechetical school by Dionysius who had
+Antium holding a festival in honour: 0.7161
+    Gallus and Marcus Servilius became consuls Servilius became consuls Tiberius was at Tiberius was at Antium holding a [[Antium holding a festival in honour]] festival in honour of Gaius marriage of Gaius marriage for not even for not even such a purpose
 
-Antium: 0.2728
-    to attack the neighboring towns where grain was stored for the Romans He fell upon their garrisons unexpectedly and captured [[Antium]] Aricia Lanuvium and others There were some also that were delivered up to him by treachery Having cut off their
-    as she had come from [[Antium]] took her hand embraced her and escorted her to the villa named Bauli washed by an arm of the sea
-    and the maritime districts The sea was infested by fleets of Greek pirates who made descents on the coast round [[Antium]] and Laurentum and entered the mouth of the Tiber On one occasion the searobbers and the landrobbers encountered one another
+Puteoli would be if they belonged: 0.7029
+    here a more valuable asset than valuable asset than the granaries at the granaries at Puteoli would be [[Puteoli would be if they belonged]] if they belonged to you Cite to you Cite all the stock all the stock Epicurean maxims 'Friends
 
-Idumaea: 0.2727
-    Cassius is also the shrine of Jupiter Cassius Ostracine is the place renowned for the tomb of Pompey the Great [[Idumaea]] rich
+the granaries at Puteoli would be: 0.6982
+    dont reckon Triarius here a more here a more valuable asset than valuable asset than the granaries at [[the granaries at Puteoli would be]] Puteoli would be if they belonged if they belonged to you Cite to you Cite all the stock
 
-Pompei: 0.2705
-    child was killed she herself survived without being otherwise injured Among the portents in connexion with Catiline a towncouncillor of [[Pompei]]
+the church of Alexandria for thirteen: 0.6780
+    year of his reign that Abilius reign that Abilius who had ruled who had ruled the church of [[the church of Alexandria for thirteen]] Alexandria for thirteen years was succeeded years was succeeded by Cerdon He by Cerdon He was the third
