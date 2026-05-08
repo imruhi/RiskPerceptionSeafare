@@ -10,9 +10,14 @@ import pandas as pd
 from datasets import Dataset
 from sklearn.model_selection import train_test_split
 import re
-from data_gathering.utils.clean_text import clean_text
+from data_gathering.utils.util import clean_text
+from pathlib import Path
+import json
 
-with open("params.json", 'r') as f:
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+params_path = PROJECT_ROOT / "params.json"
+with open(params_path, 'r') as f:
     PARAMS = json.load(f)
 
 
