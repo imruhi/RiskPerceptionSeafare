@@ -17,7 +17,7 @@ import re
 import json
 import torch
 from sentence_transformers import SentenceTransformer
-from clean_text import clean_text
+from util import clean_text
 from wordcloud import WordCloud
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords
@@ -57,7 +57,7 @@ def train_model():
     
     all_excerpts = Dataset.load_from_disk(data_path).to_pandas().reset_index(drop=True)
     print(f"Original size: {len(all_excerpts)}")
-    dataset = pd.DataFrame({"text_id": all_excerpts["text_id"],"text":all_excerpts[f'text_{PARAMS["word_window"]}'], "label":all_excerpts["level_shipwreck"]})
+    dataset = all_excerpts.rename(columns={f"text_{PARAMS['word_window']}": "text"})
     dataset["text_cleaned"] = [clean_text(x) for x in tqdm(dataset["text"])]
     texts = list(dataset["text_cleaned"])
     embeddings = embedding_model.encode(texts, show_progress_bar=True)
@@ -111,7 +111,7 @@ def train_model():
     Dataset.from_pandas(dataset.drop(columns="text_cleaned")).save_to_disk(data_path+"_filtered")
 
 def knn_clustering(dataset):
-    data_path = f'{PARAMS["roberta_data_path"]}_{PARAMS["word_window"]}_filtered'
+    # data_path = f'{PARAMS["roberta_data_path"]}_{PARAMS["word_window"]}_filtered'
 
     stemmer = PorterStemmer()
     lemmatizer = WordNetLemmatizer()
@@ -138,6 +138,7 @@ def knn_clustering(dataset):
         text = normalize_text(text, method)
         return text
     
+    dataset = dataset.drop(columns="__index_level_0__")
     embedding_model = SentenceTransformer(PARAMS["sentence_model"], model_kwargs={"torch_dtype": "float16"}, device="cuda")
     dataset["text_cleaned"] = [preprocess_text(x) for x in dataset["text"]]
     embeddings = embedding_model.encode(list(dataset["text_cleaned"]) , show_progress_bar=True)
@@ -150,7 +151,7 @@ def knn_clustering(dataset):
         print(f"K-Means clustering with {n_clusters} clusters: Silhouette Score = {silhouette_avg}")
 
         return cluster_labels, silhouette_avg, kmeans
-    kmeans_labels, kmeans_silhouette, kmeans_model = perform_kmeans_clustering(embeddings, n_clusters=4)
+    kmeans_labels, _, _ = perform_kmeans_clustering(embeddings, n_clusters=4)
 
     dataset["label_knn"] = kmeans_labels
     label_to_keep = []
@@ -162,9 +163,9 @@ def knn_clustering(dataset):
         all_texts = " ".join(list(df["text_cleaned"]))
         text = ' '.join(word for word in all_texts.split() if word not in stop_words)
         wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
-        top_10 = [v for v in wordcloud.words_.keys()][:10]
-        print(", ".join(top_10))
-        if "sea" in top_10:
+        top_n = [v for v in wordcloud.words_.keys()][:5]
+        print(", ".join(top_n))
+        if "sea" in top_n:
             label_to_keep.append(x)
 
     return dataset, label_to_keep

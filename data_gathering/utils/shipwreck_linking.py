@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 from collections import Counter
 import json
 import math
+from util import to_json
+
 with open("params.json", 'r') as f:
     PARAMS = json.load(f)
 
@@ -57,8 +59,8 @@ def link(low, high):
     coord_port = all_ports_aoe_topos[["LATITUDE", "LONGITUDE", "newOBJECTID"]].dropna().reset_index(drop=True)
     print(f"{len_original-len(coord_port)} ports do not have lat and long")
 
-    port_aoe = all_ports_aoe_topos[["newOBJECTID", "AoE"]]
-    port_aoe = port_aoe.set_index('newOBJECTID')["AoE"].to_dict()
+    port_aoe = all_ports_aoe_topos[["newOBJECTID", "AoE"]].set_index("newOBJECTID").to_dict()["AoE"]
+    to_json(port_aoe, "id2aoe.json")
 
     # Convert to radians (required for haversine distance)
     df1_rad = np.radians(coord_port[['LATITUDE', 'LONGITUDE']])
@@ -73,7 +75,9 @@ def link(low, high):
     # connect shipwrecks to ports (using lat long)
     geodatabase_shipwrecks['newOBJECTID'] = coord_port.iloc[ind.flatten()]['newOBJECTID'].values
     geodatabase_shipwrecks["AoE"] = [port_aoe[x] for x in geodatabase_shipwrecks["newOBJECTID"]]
-    object_id_port = all_ports_aoe_topos.set_index('newOBJECTID')["NAME"].to_dict()
+    object_id_port = all_ports_aoe_topos[["newOBJECTID", "NAME"]].set_index("newOBJECTID").to_dict()["NAME"]
+    to_json(object_id_port, "id2name.json")
+
     # for display purposes
     geodatabase_shipwrecks["port_name"] = [object_id_port[x].split(', ')[0] for x in geodatabase_shipwrecks["newOBJECTID"]]
 
@@ -91,7 +95,8 @@ def link(low, high):
     port_shipwrecks_num = port_shipwrecks.set_index('newOBJECTID')["num_shipwrecks"].to_dict()
     all_excerpts_["num_shipwrecks"] = [port_shipwrecks_num[x] for x in all_excerpts_["newOBJECTID"]]
     all_excerpts_["text_id"] = [f"id{i+1}" for i in range(len(all_excerpts_))]
-    # save collated data for finetuning model
+
+    # save collated data for filtering + finetuning model
     Dataset.from_pandas(all_excerpts_).save_to_disk(PARAMS["roberta_data_path"])
 
     print(f'# excerpts found: {len(all_excerpts_)} (for {len(all_excerpts_["newOBJECTID"].unique())} ports/equivalent)')

@@ -10,7 +10,8 @@ import re
 from pathlib import Path
 import json
 from collections import Counter
-from clean_text import clean_text
+from util import clean_text
+
 with open("params.json", 'r') as f:
     PARAMS = json.load(f)
 
@@ -62,11 +63,15 @@ def get_concordance(dataset_path, save_path, place_filter=True, word_window=100)
     context_df = pd.DataFrame(new_rows, columns=["text_id", "workID", "auth_title_display", "type", "category", "original_lang", "edate", "placeID", "newOBJECTID", "AoE", "level_shipwreck", "num_shipwrecks", "place_name", f"text_{word_window}"])
     context_df = context_df.dropna().drop_duplicates().reset_index(drop=True)
     # how the data will be used
-    context_df_idx = pd.DataFrame({f"text_{word_window}":context_df[f"text_{word_window}"], "label":context_df["level_shipwreck"]}).dropna().drop_duplicates().index
-    context_df = context_df.loc[context_df_idx]
-    Dataset.from_pandas(context_df).save_to_disk(save_path)
-    plot_lens(context_df, word_window)
-    print(f"len of contextual data: {len(context_df)}")
+    context_df_idx = pd.DataFrame({f"text_{word_window}":context_df[f"text_{word_window}"], 
+                                   "label":context_df["level_shipwreck"],
+                                   "text_id": context_df["text_id"],
+                                   "edate": context_df["edate"],
+                                   "newOBJECTID": context_df["newOBJECTID"]}).dropna().drop_duplicates()
+    
+    Dataset.from_pandas(context_df_idx).save_to_disk(save_path)
+    plot_lens(context_df_idx, word_window)
+    print(f"len of contextual data: {len(context_df_idx)}")
 
 def plot_lens(context_df, word_window):
     
