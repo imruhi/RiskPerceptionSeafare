@@ -1,0 +1,96 @@
+
+Top words for class HIGH:
+
+deceptive shallows and uncertain seas: 0.2478
+    For Alexandria is approached by a approached by a treacherous harbour with treacherous harbour with deceptive shallows and [[deceptive shallows and uncertain seas]]
+
+treacherous harbour with deceptive shallows and: 0.2301
+     For Alexandria is approached by a approached by a treacherous harbour with [[treacherous harbour with deceptive shallows and]] deceptive shallows and uncertain seas
+
+either killing or enslaving any who: 0.2092
+    predecessors in power had consistently closed had consistently closed Egypt to strangers Egypt to strangers either killing or [[either killing or enslaving any who]] enslaving any who touched its shores
+
+Egypt to strangers either killing or: 0.1864
+    10 For his predecessors in power predecessors in power had consistently closed had consistently closed Egypt to strangers [[Egypt to strangers either killing or]] either killing or enslaving any who enslaving any who touched its shores
+
+For Alexandria is approached by a: 0.1770
+     [[For Alexandria is approached by a]] approached by a treacherous harbour with treacherous harbour with deceptive shallows and deceptive shallows and uncertain seas
+
+ca 1 BCE The mouths have: 0.1740
+     [[ca 1 BCE The mouths have]] The mouths have entrances which are entrances which are not capable of not capable of admitting large vessels
+
+to their side of the river: 0.1715
+    a vessel loaded with grain grounded with grain grounded in the shallows in the shallows to their side [[to their side of the river]]
+
+in the shallows to their side: 0.1695
+    Germans began hauling a vessel loaded a vessel loaded with grain grounded with grain grounded in the shallows [[in the shallows to their side]] to their side of the river
+
+but lighters only on account of: 0.1602
+    entrances which are not capable of not capable of admitting large vessels admitting large vessels but lighters only [[but lighters only on account of]] on account of the shallows and the shallows and marshes
+
+approached by a treacherous harbour with: 0.1593
+     For Alexandria is approached by a [[approached by a treacherous harbour with]] treacherous harbour with deceptive shallows and deceptive shallows and uncertain seas
+
+Top words for class MEDIUM:
+
+all the woodland grove with leaves: 0.5975
+    Tomorrow a storm sent from the sent from the East will fill East will fill all the woodland [[all the woodland grove with leaves]] grove with leaves and the sands and the sands with useless weed with useless weed unless the raven
+
+breeze more gently held The favouring: 0.5794
+    Cyprus on the foamy brine Then foamy brine Then as the eastern as the eastern breeze more gently [[breeze more gently held The favouring]] held The favouring deep they touched deep they touched the Libyan shore the Libyan shore Where stood the
+
+the pavement with the moisture and: 0.5517
+    fly back again to the temple to the temple where they sprinkle where they sprinkle the pavement with [[the pavement with the moisture and]] the moisture and clean it
+
+where they sprinkle the pavement with: 0.5511
+    moistened their wings fly back again fly back again to the temple to the temple where they sprinkle [[where they sprinkle the pavement with]] the pavement with the moisture and the moisture and clean it
+
+in water and dined hard by: 0.5147
+    When we reached it we went it we went ashore to take ashore to take in water and [[in water and dined hard by]] dined hard by the ships
+
+sign of rain if the raven: 0.4396
+     It is a sign of rain [[sign of rain if the raven]] if the raven who is accustomed who is accustomed to make many to make many different sounds repeats
+
+held The favouring deep they touched: 0.4126
+    foamy brine Then as the eastern as the eastern breeze more gently breeze more gently held The favouring [[held The favouring deep they touched]] deep they touched the Libyan shore the Libyan shore Where stood the Where stood the camp of Cato
+
+or individual and wished to exercise: 0.3918
+    alien who had right of reprisal right of reprisal against any city against any city or individual and [[or individual and wished to exercise]] wished to exercise it should have it should have his name entered his name entered on a list
+
+grove with leaves and the sands: 0.3871
+    sent from the East will fill East will fill all the woodland all the woodland grove with leaves [[grove with leaves and the sands]] and the sands with useless weed with useless weed unless the raven unless the raven old prophet of
+
+dined hard by the ships: 0.3753
+    it we went ashore to take ashore to take in water and in water and dined hard by [[dined hard by the ships]]
+
+Top words for class LOW:
+
+They rowed in there knowing it: 0.7168
+     [[They rowed in there knowing it]] there knowing it from before
+
+Puteoli and the harbour dues at: 0.5734
+    out to contractors the customs dues the customs dues at Capua and at Capua and Puteoli and the [[Puteoli and the harbour dues at]] harbour dues at the Castra Hannibalis the Castra Hannibalis where a town where a town now stands
+
+the fish unfit to eat: 0.4583
+    odor for a distance of twenty distance of twenty stadia and makes stadia and makes the fish unfit [[the fish unfit to eat]]
+
+stadia and makes the fish unfit: 0.4519
+    emits an offensive odor for a odor for a distance of twenty distance of twenty stadia and makes [[stadia and makes the fish unfit]] the fish unfit to eat
+
+along the shore by ramming and: 0.4389
+    by surprise he disabled some of disabled some of the vessels anchored the vessels anchored along the shore [[along the shore by ramming and]] by ramming and others by burning others by burning for Dionysius was for Dionysius was unable to come
+
+to press them more and more: 0.3867
+    paid in their name we began name we began from then on from then on to press them [[to press them more and more]] more and more with our demands
+
+at Capua and Puteoli and the: 0.3826
+    They also leased out to contractors out to contractors the customs dues the customs dues at Capua and [[at Capua and Puteoli and the]] Puteoli and the harbour dues at harbour dues at the Castra Hannibalis the Castra Hannibalis where a town
+
+and close in shore as they: 0.3726
+    in single file and by this and by this inside the gulf inside the gulf and close in [[and close in shore as they]] shore as they so much wished so much wished at one signal at one signal tacked suddenly and
+
+went ashore and cooked their suppers: 0.3699
+    near a stream of fresh water of fresh water and the men and the men went ashore and [[went ashore and cooked their suppers]]
+
+more and more with our demands: 0.3687
+    name we began from then on from then on to press them to press them more and more [[more and more with our demands]]
