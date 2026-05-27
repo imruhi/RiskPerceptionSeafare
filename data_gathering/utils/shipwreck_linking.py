@@ -76,6 +76,12 @@ def link(low, high):
     geodatabase_shipwrecks['newOBJECTID'] = coord_port.iloc[ind.flatten()]['newOBJECTID'].values
     geodatabase_shipwrecks["AoE"] = [port_aoe[x] for x in geodatabase_shipwrecks["newOBJECTID"]]
     object_id_port = all_ports_aoe_topos[["newOBJECTID", "NAME"]].set_index("newOBJECTID").to_dict()["NAME"]
+    
+    # repeated, manually replacing
+    object_id_port[7] = "Massalia Graecorum 1, Massilia, Lacydon"
+    object_id_port[8] = "Massalia Graecorum 2, Massilia, Lacydon"
+    all_ports_aoe_topos["NAME"] = [object_id_port[x] for x in all_ports_aoe_topos["newOBJECTID"]]
+    all_ports_aoe_topos.drop(columns=["Unnamed: 0"]).to_csv(PARAMS["all_ports_aoe_topos"])
     to_json(object_id_port, "id2name.json")
 
     # for display purposes
@@ -84,10 +90,14 @@ def link(low, high):
     # descretisize
     port_shipwrecks_ = geodatabase_shipwrecks.groupby("newOBJECTID").size().reset_index(name="num_shipwrecks")
     port_shipwrecks_["level_shipwreck"] = [level_shipwreck(int(x), low=low, high=high) for x in port_shipwrecks_["num_shipwrecks"]]
-
+    
     # keep texts for which we know level of shipwreck
     port_shipwrecks = port_shipwrecks_[["newOBJECTID", "level_shipwreck"]]
     port_shipwrecks = port_shipwrecks.set_index('newOBJECTID')["level_shipwreck"].to_dict()
+
+    # manually replacing above
+    port_shipwrecks[8] = "HIGH"
+    
     possible_ports = list(port_shipwrecks.keys())
     all_excerpts_ = all_excerpts.query("newOBJECTID in @possible_ports")
     all_excerpts_["level_shipwreck"] = [port_shipwrecks[x] for x in all_excerpts_["newOBJECTID"]]
