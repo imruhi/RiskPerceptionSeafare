@@ -11,6 +11,8 @@ import numpy as np
 import warnings
 from sklearn.metrics import confusion_matrix
 warnings.filterwarnings("ignore")
+from sklearn.utils.class_weight import compute_class_weight
+import torch
 
 accuracy = evaluate.load("accuracy")
 precision = evaluate.load("precision")
@@ -89,16 +91,17 @@ def train():
                                                 num_train_epochs=PARAMS["train_epochs"],
                                                 per_device_train_batch_size=PARAMS["batch_size"],
                                                 per_device_eval_batch_size=PARAMS["batch_size"],
-                                                eval_strategy="steps",
-                                                eval_steps=50,
-                                                save_strategy="steps",
-                                                save_steps=200,
+                                                eval_strategy="epoch",
+                                                # eval_steps=50,
+                                                save_strategy="epoch",
+                                                # save_steps=200,
                                                 logging_strategy="steps",
                                                 logging_steps=50,
                                                 disable_tqdm=False, 
                                                 load_best_model_at_end=True,
-                                                warmup_steps=PARAMS["warmup_steps"],
+                                                warmup_ratio=PARAMS["warmup_ratio"],
                                                 weight_decay=PARAMS["weight_decay"],
+                                                lr_scheduler_type=PARAMS["lr_scheduler"],
                                                 learning_rate=PARAMS["lr"],
                                                 fp16=True,
                                                 logging_dir=save_path+PARAMS["logging_dir"],
@@ -106,17 +109,40 @@ def train():
                                                 metric_for_best_model=PARAMS["metric"],
                                                 greater_is_better=True,
                                                 run_name = 'classification',
-                                                report_to=["tensorboard"]
+                                                report_to=["tensorboard"],
+                                                seed=42
                                         )
-                                        
-        trainer = Trainer(
-                            model=model,
-                            args=training_args,
-                            compute_metrics=compute_metrics,
-                            train_dataset=train_data,
-                            eval_dataset=test_data,
-                            data_collator=data_collator, 
-                        )
+        
+        weights = compute_class_weight('balanced', classes=np.array([0,1,2]), y=train_data["label"])
+        class_weights = torch.tensor(weights, dtype=torch.float).to(device)
+
+        class WeightedLossTrainer(Trainer):
+            def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+                labels = inputs.pop("labels")
+                outputs = model(**inputs)
+                logits = outputs.logits
+
+                # Your weighted loss here
+                loss_fn = torch.nn.CrossEntropyLoss(weight=class_weights)  # class_weights from outer scope
+                loss = loss_fn(logits, labels)
+
+                return (loss, outputs) if return_outputs else loss
+        trainer = WeightedLossTrainer(      # <-- use your subclass
+                                        model=model,
+                                        args=training_args,
+                                        train_dataset=train_data,
+                                        eval_dataset=test_data,
+                                        compute_metrics=compute_metrics,
+                                        data_collator=data_collator,
+                                    )                      
+        # trainer = Trainer(
+        #                     model=model,
+        #                     args=training_args,
+        #                     compute_metrics=compute_metrics,
+        #                     train_dataset=train_data,
+        #                     eval_dataset=test_data,
+        #                     data_collator=data_collator, 
+        #                 )
         print("Training")
 
         trainer.train()
